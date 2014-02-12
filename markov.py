@@ -3,12 +3,7 @@
 import sys
 import random
 
-  #read the file
-f = open('blender.txt', 'r')
-  #read the file into another copy 
-sourcefile = f.read()
-  #close original file
-f.close()
+
 
 #------------------------------
 #  The story, so far.. 
@@ -24,15 +19,14 @@ f.close()
 #        if this does exist as a tuple already, append the next word to the value list
 
 #def make_chains(corpus):
-dictionary = {}
 
-def make_chains():
+def make_chains(corpus):
     """Takes an input text as a string and returns a dictionary of
     markov chains."""
-    split_words = sourcefile.split()
-    # print split_words
-    
+    dictionary = {}
 
+    split_words = corpus.split()
+    # print split_words
    
     for i in range(len(split_words)-2):
         if dictionary.get((split_words[i], split_words[i+1])):
@@ -41,26 +35,26 @@ def make_chains():
             dictionary[(split_words[i], split_words[i+1])] = [split_words[i+2]]
 
     print dictionary
-#    for word in split_lines:
-make_chains()
+    return dictionary
+
 
 # ---------- this is all intact from the sample 
 #
 def make_text(chains):
-   """Takes a dictionary of markov chains and returns random text
-  based off an original text."""
+    """Takes a dictionary of markov chains and returns random text
+    based off an original text."""
+    keylist = chains.keys()
+    first_tuple = random.choice(keylist)
+
+#    for i in range(10):
+ #       print first_tuple
 
 # for i in xrange(maxwords):
 #     newword = random.choice(table[(w1, w2)])
 #     if newword == nonword: sys.exit()
 #     print newword;
 #     w1, w2 = w2, newword
-
-# for i in range(len(dictionary)):
-#     keylist = dictionary.keys()
-#     next_word = random.choice(keylist)
-#     print next_word
-
+    
 #     for (word1, word2) in dictionary
 
 
@@ -77,7 +71,11 @@ def main():
     args = sys.argv
 
     # Change this to read input_text from a file
-    input_text = "Some text"
+    f = open('blender.txt', 'r')
+      #read the file into another copy 
+    input_text = f.read()
+      #close original file
+    f.close()
 
     chain_dict = make_chains(input_text)
     random_text = make_text(chain_dict)
