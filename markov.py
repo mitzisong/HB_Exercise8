@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import sys
+import random
 
   #read the file
 f = open('blender.txt', 'r')
@@ -23,13 +24,15 @@ f.close()
 #        if this does exist as a tuple already, append the next word to the value list
 
 #def make_chains(corpus):
+dictionary = {}
+
 def make_chains():
     """Takes an input text as a string and returns a dictionary of
     markov chains."""
     split_words = sourcefile.split()
     # print split_words
     
-    dictionary = {}
+
    
     for i in range(len(split_words)-2):
         if dictionary.get((split_words[i], split_words[i+1])):
@@ -46,6 +49,28 @@ make_chains()
 def make_text(chains):
    """Takes a dictionary of markov chains and returns random text
   based off an original text."""
+
+# for i in xrange(maxwords):
+#     newword = random.choice(table[(w1, w2)])
+#     if newword == nonword: sys.exit()
+#     print newword;
+#     w1, w2 = w2, newword
+
+# for i in range(len(dictionary)):
+#     keylist = dictionary.keys()
+#     next_word = random.choice(keylist)
+#     print next_word
+
+#     for (word1, word2) in dictionary
+
+
+    # word1, word2 = word2, next_word
+
+    # print word1
+    # print word2
+    # print next_word
+
+
 #    return "Here's some random text."
 
 def main():
