@@ -383,7 +383,7 @@ Come again?
 I'm not following you.
 What?
 Homer Simpson, you're under arrest for attempted murder.
-Yeah, that's what they all say. They all say "d'oh".
+Yeah, that's what they all say. They all say d'oh
 Did you have the same backwards-talking dream with the flaming cards?
 So Superintendent Chalmers can vouch for your whereabouts?
 Yeah! All right, okay! I believe you're innocent. Gee, I hope all the suspects are this much fun.
@@ -451,7 +451,7 @@ He was going to the bathroom.
 Where are we going, Mr. Simpson?
 Hi. Can Lisa come out with her hands up?
 I'm a baby bird!
-Go ahead, Ralpie; the stranger is offering you a treat!
+Go ahead, Ralpie the stranger is offering you a treat!
 Oh, Daddy! It tastes like Grandma!
 Holy Moses! It DOES taste like Grandma!
 I want more!
@@ -461,7 +461,7 @@ Daddy's stomach is crying.
 I'm a furniture.
 Field day! I can go cuckoo, and no one can stop me!
 I ated the purple berries... oooh, oohh
-They taste like... burning.
+They taste like burning.
 I won! I won!
 Me fail English? That's unpossible!
 I heard your dad went into a restaurant and ate on the food in the restaurant and they had to close the restaurant.
