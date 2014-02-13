@@ -2,6 +2,20 @@
 
 import sys
 import random
+import twitter
+import os
+
+
+
+def tweet_text(ourtext):
+    twitter_api_key = os.environ.get("TWITTER_API_KEY")
+    twitter_api_secret = os.environ.get("TWITTER_API_SECRET")
+    twitter_access_token = os.environ.get("TWITTER_ACCESS_TOKEN")
+    twitter_access_token_secret = os.environ.get("TWITTER_ACCESS_TOKEN_SECRET")
+    api = twitter.Api(consumer_key=twitter_api_key, consumer_secret=twitter_api_secret, access_token_key=twitter_access_token, access_token_secret=twitter_access_token_secret)
+
+    status = api.PostUpdate(ourtext)
+    print status.text
 
 def make_chains(corpus):
     """Takes an input text as a string and returns a dictionary of
@@ -96,7 +110,8 @@ def main():
     
     chain_dict = make_chains(input_text)
     random_text = make_text(chain_dict)
-    print random_text
+    tweet_text(random_text)
+    #print random_text
 
 if __name__ == "__main__":
     main()
